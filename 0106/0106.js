@@ -1,4 +1,3 @@
-var waves = 3;
 var h = 50;
 var s = 50;
 
@@ -14,26 +13,24 @@ function setup() {
     colorMode(HSB, 100);
     
     gui = createGui('CONTROLS');
-    gui.addGlobals('waves', 'h', 's');
+    gui.addGlobals('h', 's');
  
 }
 
 function draw() {
     
+    var c1 = color(h,s,100);
+    var c2 = color(h,s,0);
     
-    var sinewave = [];
+    for (var i = 0; i <= height; i++) {
+        var inter = map(i, 0, height, 0, 1);
+        var c = lerpColor(c1, c2, inter);
+        stroke(c);
 
-    for (var i=0; i<width; i++) {
-        var amount = map(i, 0, width, 0, waves*PI);
-        sinewave[i] = abs(sin(amount));
-    }
-
-    for (var i=0; i<width; i++) {
-        stroke(h, s, sinewave[i] * 100);
-        line(i, 0, i, height);
-    }
+        line(0, i, 0+width, i);
+   }
     
-    text('January 5, 2018', 20,  windowHeight - 20);
+    text('January 6, 2018', 20,  windowHeight - 20);
     fill(100);
 
     
