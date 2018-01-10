@@ -19,3 +19,5 @@
 [0108](https://micahwalter.github.io/twenty-eighteen-sketchbook/0108/)
 
 [0109](https://micahwalter.github.io/twenty-eighteen-sketchbook/0109/)
+
+[0110](https://micahwalter.github.io/twenty-eighteen-sketchbook/0110/)
